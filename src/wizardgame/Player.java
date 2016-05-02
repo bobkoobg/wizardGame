@@ -14,19 +14,11 @@ public class Player {
         return name;
     }
 
-    public void setName( String name ) {
-        this.name = name;
-    }
-
     public int getHealth() {
         if ( health <= 0 ) {
             health = 0;
         }
         return health;
-    }
-
-    public void setHealth( int health ) {
-        this.health = health;
     }
 
     public void takeDamage( int health ) {

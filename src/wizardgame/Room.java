@@ -76,4 +76,12 @@ public class Room {
     public void setDamage( int damage ) {
         this.damage = damage;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" + "east=" + east + ", west=" + west + ", north=" + north
+                + ", south=" + south + ", name=" + name + ", description="
+                + description + ", damage=" + damage + '}';
+    }
+
 }
