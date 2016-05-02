@@ -1,7 +1,6 @@
 package wizardgame;
 
-public class Room
-{
+public class Room {
 
     private Room east;
     private Room west;
@@ -11,86 +10,70 @@ public class Room
     private String description;
     private int damage;
 
-    public Room(String name, String description, int damage)
-    {
+    public Room( String name, String description, int damage ) {
         this.name = name;
         this.description = description;
         this.damage = damage;
     }
 
-    public Room(String name, String description)
-    {
+    public Room( String name, String description ) {
         this.name = name;
         this.description = description;
     }
 
-    public Room getEast()
-    {
+    public Room getEast() {
         return east;
     }
 
-    public void setEast(Room east)
-    {
+    public void setEast( Room east ) {
         this.east = east;
     }
 
-    public Room getWest()
-    {
+    public Room getWest() {
         return west;
     }
 
-    public void setWest(Room west)
-    {
+    public void setWest( Room west ) {
         this.west = west;
     }
 
-    public Room getNorth()
-    {
+    public Room getNorth() {
         return north;
     }
 
-    public void setNorth(Room north)
-    {
+    public void setNorth( Room north ) {
         this.north = north;
     }
 
-    public Room getSouth()
-    {
+    public Room getSouth() {
         return south;
     }
 
-    public void setSouth(Room south)
-    {
+    public void setSouth( Room south ) {
         this.south = south;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName( String name ) {
         this.name = name;
     }
 
-    public String getDescription()
-    {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description)
-    {
+    public void setDescription( String description ) {
         this.description = description;
     }
 
-    public int getDamage()
-    {
+    public int getDamage() {
         return damage;
     }
 
-    public void setDamage(int damage)
-    {
+    public void setDamage( int damage ) {
         this.damage = damage;
     }
 }
