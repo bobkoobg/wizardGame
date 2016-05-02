@@ -190,22 +190,22 @@ public class Game
 
         //1
         rooms[0].setEast(rooms[1]);
-        rooms[0].setWest(rooms[0]);
-        rooms[0].setNorth(rooms[0]);
+        rooms[0].setWest(null);
+        rooms[0].setNorth(null);
         rooms[0].setSouth(rooms[3]);
         //2
         rooms[1].setEast(rooms[2]);
         rooms[1].setWest(rooms[0]);
-        rooms[1].setNorth(rooms[1]);
+        rooms[1].setNorth(null);
         rooms[1].setSouth(rooms[4]);
         //3
-        rooms[2].setEast(rooms[2]);
+        rooms[2].setEast(null);
         rooms[2].setWest(rooms[1]);
-        rooms[2].setNorth(rooms[2]);
+        rooms[2].setNorth(null);
         rooms[2].setSouth(rooms[5]);
         //4
         rooms[3].setEast(rooms[4]);
-        rooms[3].setWest(rooms[3]);
+        rooms[3].setWest(null);
         rooms[3].setNorth(rooms[0]);
         rooms[3].setSouth(rooms[6]);
         //5
@@ -214,25 +214,24 @@ public class Game
         rooms[4].setNorth(rooms[1]);
         rooms[4].setSouth(rooms[7]);
         //6
-        rooms[5].setEast(rooms[5]);
+        rooms[5].setEast(null);
         rooms[5].setWest(rooms[4]);
         rooms[5].setNorth(rooms[2]);
         rooms[5].setSouth(rooms[8]);
         //7
         rooms[6].setEast(rooms[7]);
-        rooms[6].setWest(rooms[6]);
+        rooms[6].setWest(null);
         rooms[6].setNorth(rooms[3]);
-        rooms[6].setSouth(rooms[6]);
+        rooms[6].setSouth(null);
         //8
         rooms[7].setEast(rooms[8]);
         rooms[7].setWest(rooms[6]);
         rooms[7].setNorth(rooms[4]);
-        rooms[7].setSouth(rooms[7]);
+        rooms[7].setSouth(null);
         //9
-        rooms[8].setEast(rooms[8]);
+        rooms[8].setEast(null);
         rooms[8].setWest(rooms[7]);
         rooms[8].setNorth(rooms[5]);
-
         rooms[8].setSouth(rooms[9]); //winning room
 
         return rooms;
@@ -308,7 +307,7 @@ public class Game
             switch (input.toLowerCase())
             {
                 case "east":
-                    if (currentRoom.getSouth() == null || currentRoom.equals(currentRoom.getSouth()))
+                    if (currentRoom.getSouth() == null )
                     {
                         System.out.println("East door : ***LOCKED***");
                     } else
@@ -319,7 +318,7 @@ public class Game
                     }
                     break;
                 case "west":
-                    if (currentRoom.getNorth() == null || currentRoom.equals(currentRoom.getNorth()))
+                    if (currentRoom.getNorth() == null )
                     {
                         System.out.println("West door : ***LOCKED***");
                     } else
@@ -329,7 +328,7 @@ public class Game
                     }
                     break;
                 case "north":
-                    if (currentRoom.getEast() == null || currentRoom.equals(currentRoom.getEast()))
+                    if (currentRoom.getEast() == null )
                     {
                         System.out.println("North door : ***LOCKED***");
                     } else
@@ -339,7 +338,7 @@ public class Game
                     }
                     break;
                 case "south":
-                    if (currentRoom.getWest() == null || currentRoom.equals(currentRoom.getWest()))
+                    if (currentRoom.getWest() == null )
                     {
                         System.out.println("South door : ***LOCKED***");
                     } else
@@ -355,7 +354,7 @@ public class Game
             switch (input.toLowerCase())
             {
                 case "east":
-                    if (currentRoom.getEast() == null || currentRoom.equals(currentRoom.getEast()))
+                    if (currentRoom.getEast() == null )
                     {
                         System.out.println("East door : ***LOCKED***");
                     } else
@@ -365,7 +364,7 @@ public class Game
                     }
                     break;
                 case "west":
-                    if (currentRoom.getWest() == null || currentRoom.equals(currentRoom.getWest()))
+                    if (currentRoom.getWest() == null )
                     {
                         System.out.println("West door : ***LOCKED***");
                     } else
@@ -375,7 +374,7 @@ public class Game
                     }
                     break;
                 case "north":
-                    if (currentRoom.getNorth() == null || currentRoom.equals(currentRoom.getNorth()))
+                    if (currentRoom.getNorth() == null )
                     {
                         System.out.println("North door : ***LOCKED***");
                     } else
@@ -385,7 +384,7 @@ public class Game
                     }
                     break;
                 case "south":
-                    if (currentRoom.getSouth() == null || currentRoom.equals(currentRoom.getSouth()))
+                    if (currentRoom.getSouth() == null )
                     {
                         System.out.println("South door : ***LOCKED***");
                     } else
@@ -407,7 +406,7 @@ public class Game
         boolean east = true;
         while (east)
         {
-            if (temp.getEast() != null || temp.getEast() != temp)
+            if (temp.getEast() != null && temp.getEast() != temp)
             {
                 result += "- east ";
                 temp = temp.getEast();
@@ -418,7 +417,7 @@ public class Game
         }
         while (south)
         {
-            if (temp.getSouth() != null || temp.getSouth() != temp)
+            if (temp.getSouth() != null && temp.getSouth() != temp)
             {
                 result += "- south  ";
                 temp = temp.getSouth();
