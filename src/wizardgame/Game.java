@@ -96,14 +96,14 @@ public class Game {
         eligibleRoomsTree.put( 2, new Room( "Room of Despare", "Search, search!", 5 ) );
         eligibleRoomsTree.put( 3, new Room( "Crossroads", "You got lost, Traveler?", 15 ) );
         eligibleRoomsTree.put( 4, new Room( "Cylon Basestar", "Spin up the FTL drive and get the FRAK out of here!", 20 ) );
-        eligibleRoomsTree.put( 5, new Room( "6", "6", 10 ) );
-        eligibleRoomsTree.put( 6, new Room( "7", "7", 5 ) );
-        eligibleRoomsTree.put( 7, new Room( "8", "8", 10 ) );
-        eligibleRoomsTree.put( 8, new Room( "9", "9", 6 ) );
-        eligibleRoomsTree.put( 10, new Room( "11", "11", 10 ) );
-        eligibleRoomsTree.put( 11, new Room( "12", "12", 15 ) );
-        eligibleRoomsTree.put( 12, new Room( "13", "13", 5 ) );
-        eligibleRoomsTree.put( 13, new Room( "14", "14", 20 ) );
+        eligibleRoomsTree.put( 5, new Room( "Snakes-s-s-s", "They bite, get away!", 10 ) );
+        eligibleRoomsTree.put( 6, new Room( "Downfall", "You fell on the ground... luckily the room is empty.", 5 ) );
+        eligibleRoomsTree.put( 7, new Room( "Tears of the lost souls", "You are drowning, get out, get out!!", 10 ) );
+        eligibleRoomsTree.put( 8, new Room( "The Six slaps", "You just entered a bathroom with six naked girls. They slapped you.", 6 ) );
+        eligibleRoomsTree.put( 10, new Room( "Winterfell", "(SPOILER ALERT) You entered Winterfell and you touched the flames...", 10 ) );
+        eligibleRoomsTree.put( 11, new Room( "Copenhagen Business Academy", "You have an assignment and the teachers do not seem to care about you, so you are just getting rekt...", 15 ) );
+        eligibleRoomsTree.put( 12, new Room( "Room of Madness", "You started hitting your head in the wall, cause of despare", 5 ) );
+        eligibleRoomsTree.put( 13, new Room( "Daenerys's Dragons", "You are burning into the flames of Drogon, Rhaegal and Viserion", 20 ) );
         eligibleRoomsTree.put( 14, new Room( "Room of Doom", " I-I-INSTAA KILLLL-IL-IL", 1000 ) );
 
         Random rand = new Random();
@@ -328,7 +328,7 @@ public class Game {
      */
     private void directionLogic( String input ) {
 
-        int roomShiftChance = rand.nextInt( (4) + 1 );
+        int roomShiftChance = rand.nextInt( (3) + 1 );
         boolean isShiftIncluded = roomShiftChance == 1 ? true : false;
 
         if ( isShiftIncluded ) {
