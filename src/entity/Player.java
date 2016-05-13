@@ -1,4 +1,4 @@
-package wizardgame;
+package entity;
 
 public class Player {
 

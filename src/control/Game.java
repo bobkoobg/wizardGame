@@ -1,5 +1,7 @@
-package wizardgame;
+package control;
 
+import entity.Player;
+import entity.Room;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -25,7 +27,7 @@ public class Game {
     //Utilities
     Random rand = new Random();
 
-    public void GamePlayer() {
+    public void startWizardGame() {
         //Interact with player
         System.out.println( "Introduce yourself, Traveler!" );
         String name = scan.nextLine();
